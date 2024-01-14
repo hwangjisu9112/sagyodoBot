@@ -40,7 +40,7 @@ module.exports = {
         const luk = rollCoC(3, 6) * 5;
 
         //
-        const insane = Math.round(pow - pow/6) - 1;
+        const insane = Math.round(pow - pow/6) ;
         const san = `${pow}, 장기적 광기는.. [${insane}] 부터`;
         const hp = ``;
         const mp = ``;

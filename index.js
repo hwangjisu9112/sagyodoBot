@@ -34,7 +34,7 @@ for (const file of commandFiles) {
 // discord 봇이 실행될 때 터미널에 실행할 코드
 client.once('ready', () => {
     console.log(`${client.user.tag}가 깨어났다!`);
-  
+    console.log(require('discord.js').version);
   });
  
 /**
@@ -49,7 +49,8 @@ client.on('messageCreate', msg => {
     const command = args.shift().toLowerCase();
 
       // 사용자가 접두사만 입력했을 때 반응하지 않도록 하는 코드
-   if (command === '' || command === '!') return;
+   if (command === '' || command === '!'|| command.length >= 10) return;
+
     
         // 명령어가 존재하지 않은 경우, 리턴
    if (!client.commands.has(command)) {
