@@ -52,12 +52,12 @@ client.on('messageCreate', msg => {
    if (command === '' || command === '!'|| command.length >= 10) return;
 
     
-        // 명령어가 존재하지 않은 경우, 리턴
+      // 명령어가 존재하지 않은 경우, 리턴
    if (!client.commands.has(command)) {
      msg.reply("🍦 명령어가 존재하지 않습니다 \n !도움 으로 명령어 목록을 볼 수 있습니다");
      return;
    }
-
+      // 유저가 올바른 명령어를 입력하더라도, 그 기능이 오류가 있다면 출력
    try {
        client.commands.get(command).execute(msg, args);
      } catch (e) {

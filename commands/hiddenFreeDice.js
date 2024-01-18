@@ -1,8 +1,8 @@
-// ! 1d100과 같은 명령어를 입력하면 유저가 원하는 무작위 주사위를 던질 수 있습니다.
+// freeDice와 완벽하게 같지만, 디스코드 상의 마크다운 문법 || ? ||를 이용, 클릭해야 결과가 보이는 주사위를 던진다
 
 module.exports = {
-    name: 'r',
-    description: '주사위',
+    name: 'hr',
+    description: '히든 주사위',
     execute: function (msg, args) {
         // 유저가 입력한 명령어를 분석 (!1d5+1 => [1, 5, 1])
         const match = args.join('').toLowerCase().match(/(\d+)d(\d+)([+\-]\d+)?/);
@@ -44,9 +44,9 @@ module.exports = {
         if(calc != 0) {
         total += calc;
         
-        msg.channel.send(`>>> 🥠 : ${result} [ ${rollArray} ]\n${result} + ${calc} = ${total}`);
+        msg.channel.send(`>>> ㊙️ : || ${result} [ ${rollArray} ]\n${result} + ${calc} = ${total} ||`);
     } else {
-        msg.channel.send(`>>> 🥠 : ${result} [ ${rollArray} ]\n${total}`);
+        msg.channel.send(`>>> ㊙️ : || ${result} [ ${rollArray} ]\n${total} ||`);
 
             }
         } 

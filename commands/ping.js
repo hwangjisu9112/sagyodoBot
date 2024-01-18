@@ -4,6 +4,6 @@ module.exports = {
     name: "ping",
     description: "Ping!",
     execute: (msg) => {
-      msg.channel.send("https://github.com/hwangjisu9112/sagyodoBot");
+      msg.channel.send("[내용](https://github.com/hwangjisu9112/sagyodoBot)");
     },
   };
