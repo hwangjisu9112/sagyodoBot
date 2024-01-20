@@ -4,6 +4,7 @@
  * 
  * 참고
  *  https://moong-bee.com/posts/create-a-discord-bot-with-js-4
+ * https://velog.io/@shin6949/Discord-%EB%B4%87-Slash-Command-%EB%93%B1%EB%A1%9D-%EB%B0%8F-%EC%82%AC%EC%9A%A9#%ED%85%8C%EC%8A%A4%ED%8A%B8
  */
 
 // discord.js 라이브러리 호출
@@ -13,13 +14,6 @@ const { TOKEN, PREFIX } = require("./config.json");
 const fs = require("fs");
 client.commands = new Collection(); 
 
-const quickCommands = {
-	'도움': '도움!',
-	'사진': '사진',
-	'홍보': '홍보',
-  'r': '주사위',
-  'cc': '크툴루의_부름_탐사자',
-};
 const commandFiles = fs
   .readdirSync("./commands")
   .filter((file) => file.endsWith(".js"));
@@ -50,7 +44,6 @@ client.on('messageCreate', msg => {
 
       // 사용자가 접두사만 입력했을 때 반응하지 않도록 하는 코드
    if (command === '' || command === '!'|| command.length >= 10) return;
-
     
       // 명령어가 존재하지 않은 경우, 리턴
    if (!client.commands.has(command)) {
