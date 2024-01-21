@@ -16,7 +16,7 @@ module.exports = {
         const times = parseInt(match1[1], 10);
         const value = parseInt(match1[2], 10);
         
-        const calc = match1[3] ? parseInt(match1[3], 10) : 0;
+        let calc = match1[3] ? parseInt(match1[3], 10) : 0;
 
         if (isNaN(times) || isNaN(value) || times <= 0 || value <= 0 || !Number.isInteger(value)) {
             msg.channel.send('🤔 유효한 숫자를 입력해주세요. <<예: !r 1d6+1>>');
@@ -47,11 +47,10 @@ module.exports = {
         
         msg.channel.send(`>>> 🥠 : ${result} [ ${rollArray} ], ${calc} \n${result} + ${calc} = ${total}`);
         } else if(calc == 0) {
-        msg.channel.send(`>>> 🥠 : ${result} [ ${rollArray} ]\n${total}`);
+        msg.channel.send(`>>> 🥠 : ${result} [ ${rollArray} ]\n${total}`)
 
-            }
-        } 
-    }
-
-
+        }
+        
+                }
+                            }
 };

@@ -3,8 +3,9 @@
  *  node index.js
  * 
  * 참고
+ *  
  *  https://moong-bee.com/posts/create-a-discord-bot-with-js-4
- * https://velog.io/@shin6949/Discord-%EB%B4%87-Slash-Command-%EB%93%B1%EB%A1%9D-%EB%B0%8F-%EC%82%AC%EC%9A%A9#%ED%85%8C%EC%8A%A4%ED%8A%B8
+ *  https://velog.io/@shin6949/Discord-%EB%B4%87-Slash-Command-%EB%93%B1%EB%A1%9D-%EB%B0%8F-%EC%82%AC%EC%9A%A9#%ED%85%8C%EC%8A%A4%ED%8A%B8
  */
 
 // discord.js 라이브러리 호출
