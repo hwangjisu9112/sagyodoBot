@@ -22,8 +22,9 @@ https://discord.gg/EBfxj7M7
 ```
 도움 = 이 임베드를 호출합니다 (100%) (/commands/help.js)
 사진 = 명령어 입력자의 디코 프사를 출력합니다 (100%) (/commands/picture.js)
+코코 = 코코포리아 사용법을 정리한 문서를 출력합니다 (100%) (/commands/cocoporia.js)
 홍보 = 우리 디코방을 홍보하는 페이지 링크를 출력합니다 (100%) (/commands/announce.js)
-r + ?d? = ?면체 주사위를 ?번만큼 던집니다. ?는 자연수입니다 (60%)(/commands/freeDice.js)
-hr + ?d? = 클릭하기 전까지 보이지 않는 주사위를 던집니다 (60%)(/commands/hiddenFreeDice.js)
-cc = TRPG크툴루의 부름의 탐사자 캐릭터를 위한 특성치와 기본 정보 등을 출력합니다 (80%)(/commands/coc.js)
+r + ?d? = ?면체 주사위를 ?번만큼 던집니다. ?는 자연수입니다 (100% ?)(/commands/freeDice.js)
+hr + ?d? = 클릭하기 전까지 보이지 않는 주사위를 던집니다 (100% ?)(/commands/hiddenFreeDice.js)
+cc = TRPG크툴루의 부름의 탐사자 캐릭터를 위한 특성치와 기본 정보 등을 출력합니다 (100%)(/commands/coc.js)
 ```
