@@ -1,4 +1,5 @@
-// !cc를 입력하면 <크툴루의 부름>의 탐사자용 능력치를 만들 수 있습니다
+// !cc를 입력하면 <크툴루의 부름>의 탐사자용 능력치가 출력된다
+
 const { Client, Intents, MessageEmbed } = require("discord.js");
 const C = require("./coc.json");
 const client = new Client({ intents: ["GUILDS", "GUILD_MESSAGES"] });
@@ -39,10 +40,10 @@ module.exports = {
         const edu = (rollCoC(2, 6) + 6) * 5;
         const luk = rollCoC(3, 6) * 5;
 
-        // 초기 이성은 정신력과 같은 값이며, 체력은 근력과 건강의 합을 10으로 나눈 수, 마력은 정신력의 5분의 1
+        // 초기 이성은 정신력과 같은 값이며, 체력은 크기, 건강의 합을 10으로 나눈 수, 마력은 정신력의 5분의 1
         const insane = Math.round(pow - pow/5) ;
         const san = pow + `, 장기적 광기는 ` + insane + `부터`;
-        const hp = parseInt((str + hth)/10);
+        const hp = parseInt((siz + hth)/10);
         const mp = parseInt(pow/5);
         
         /** 

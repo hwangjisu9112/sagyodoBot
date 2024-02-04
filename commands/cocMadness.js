@@ -31,7 +31,7 @@ module.exports = {
     subject = '기억상실'; 
 
     } else if (Mad === 2) {
-    // 처리 코드
+  
     subject = '심신성 장애';
 
     } else if (Mad === 3) {
@@ -51,13 +51,13 @@ module.exports = {
 
     subject = '필사적인 도주';
     } else if (Mad === 8) {
-        // 처리 코드
+        
     subject = '발작적 행동이나 감정 폭발';    
     } else if (Mad === 9) {
     
     subject = '😨 공포증'; 
     } else if (Mad === 10) {
-    // 처리 코드
+    
     subject = '🤑 집착증'; 
     }
     

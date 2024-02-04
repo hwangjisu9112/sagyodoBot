@@ -4,6 +4,6 @@ module.exports = {
     name: "코코",
     description: "코코포리아 사용법",
     execute: (msg) => {
-      msg.channel.send(`[코코포리아 사용법 정리 노션 문서](https://lacy-goldfish-e44.notion.site/4e867f269cc94f87b4fa728ed3fc0810)`);
+      msg.channel.send(`🥪 [코코포리아 사용법 정리 노션 문서](https://lacy-goldfish-e44.notion.site/4e867f269cc94f87b4fa728ed3fc0810)`);
     },
   };

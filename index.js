@@ -15,6 +15,8 @@ const { TOKEN, PREFIX } = require("./config.json");
 const fs = require("fs");
 client.commands = new Collection(); 
 
+
+// commands디렉토리에 있는 자바스크립트 파일들로부터 명령어들의 모음인 name를 전부 찾아온다
 const commandFiles = fs
   .readdirSync("./commands")
   .filter((file) => file.endsWith(".js"));

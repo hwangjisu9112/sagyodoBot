@@ -5,6 +5,6 @@ module.exports = {
     name: "일정",
     description: "달력",
     execute: (msg) => {
-      msg.channel.send(`[TRPG집회소 캘린더](https://trpg-calendar.com/EklCxksj6eQreMAZTiIb)`);
+      msg.channel.send(`📅 [TRPG집회소 캘린더(변경중...)](https://trpg-calendar.com/EklCxksj6eQreMAZTiIb)`);
     },
   };
