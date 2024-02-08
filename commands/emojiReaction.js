@@ -1,11 +1,9 @@
 // 유저가 입력한 명령어에 대응하는 이모지를 달아준다
 
-const { Client, Intents, MessageEmbed } = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 const { reactions } = require("./help.json");
-const client = new Client({ intents: ["GUILDS", "GUILD_MESSAGES"] });
 
 //const emojiStar = '⭐';
-
 // const emojiA = '';
 // const emojiW = '';
 
@@ -18,6 +16,8 @@ const emojiDown = '⬇️';
 const emojiSkull = '💀';
 const emojiPenguin = '🐧'
 const emojiSushi = '🍣';
+const emojiScroll= '📜';
+
 
 module.exports = {
     name: "감정표현",
@@ -27,25 +27,22 @@ module.exports = {
         const args = msg.content.split(' ');
         const emotion = args[1]; 
 
+
+        // 사용자가 입력한 명령어가 이하의 목록에 있다면, 그에 맞는 반응을 한다
         switch (emotion.toLowerCase()) {
 
             case '목록':
-                    const embed = new MessageEmbed()
-                    .setTitle("reactions") // 1 - embed의 제목
-                    .setColor('0f4c81') // 2 - embed 사이드 바의 색
-                    .setDescription(getReactionsDescriptions()); // 3 - 설명
-                    console.log(embed);
-                    msg.reply({ embeds: [embed] })                
-                    break;
+                const embed = new MessageEmbed()
+                    .setTitle("이하의 명령어를 추가로 입력하면 사교도가 답변합니다")
+                    .setColor('0f4c81')
+                    .setDescription(getReactionsDescriptions());
+                msg.reply({ embeds: [embed] });
+                msg.react(emojiScroll);
+                break;
 
             case '권':
                 msg.react(emojiPenguin);
                 break;
-
-            case '배고파':
-                msg.react(emojiSushi);
-                break;
-
 
             case '와!':
                 msg.react(emojiSkull);
@@ -84,5 +81,5 @@ module.exports = {
 
 //help.json으로부터 각각의 commands를 불러오며, 줄바꿈으로 구별
 function getReactionsDescriptions() {
-    return Object.values(reactions).join('\n');
+    return Object.keys(reactions).map(reaction => `**${reaction}**: ${reactions[reaction]}`).join('\n');
 }
