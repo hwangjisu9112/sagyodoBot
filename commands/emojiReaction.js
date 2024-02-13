@@ -16,6 +16,7 @@ const emojiDown = '⬇️';
 const emojiSkull = '💀';
 const emojiPenguin = '🐧'
 const emojiSushi = '🍣';
+const emojiJuice = '🧃';
 const emojiScroll= '📜';
 
 
@@ -44,6 +45,10 @@ module.exports = {
                 msg.react(emojiPenguin);
                 break;
 
+            case '배고파':
+                msg.react(emojiSushi);
+                break;       
+
             case '와!':
                 msg.react(emojiSkull);
                 msg.channel.send(`아시는구나`);
@@ -69,7 +74,12 @@ module.exports = {
             
             case '비추':
                 msg.react(emojiDown);
+                break;    
+            
+            case '한잔해':
+                msg.react(emojiJuice);
                 break;            
+                            
             
         default:
             msg.reply("사교도은는 당황한 듯 하다");

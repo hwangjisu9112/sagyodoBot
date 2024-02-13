@@ -1,6 +1,6 @@
 // !cc를 입력하면 <크툴루의 부름>의 탐사자용 능력치가 출력된다
 
-const { Client, Intents, MessageEmbed } = require("discord.js");
+const { Client, MessageEmbed } = require("discord.js");
 const C = require("./coc.json");
 const client = new Client({ intents: ["GUILDS", "GUILD_MESSAGES"] });
 
