@@ -16,7 +16,6 @@ sagyodoBot은 디스코드 그룹 <<TRPG집회소>>에서 비영리적 목적으
 
 <img width="441" alt="image" src="https://github.com/hwangjisu9112/sagyodoBot/assets/101966205/b57f86be-b4e1-47c8-bc3b-7168b469ebd9">
 
-◇2024년 1월 중순 기준 기능 구현 정도 (진척도) (코드 디렉토리)
 
 # commands
 
