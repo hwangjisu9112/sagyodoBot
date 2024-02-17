@@ -2,7 +2,6 @@
 
 module.exports = {
     name: "사진",
-    aliases: ["찰칵", "프사"],
     description: "사진",
     execute: (msg) => {
       msg.channel.send(msg.author.displayAvatarURL());

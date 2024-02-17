@@ -1,7 +1,6 @@
 // !mad를 입력하면 <크툴루의 부름>의 탐사자의 광기에 대한 무작위 표를 표시합니다.
 
-const { Client, Intents, MessageEmbed } = require("discord.js");
-const client = new Client({ intents: ["GUILDS", "GUILD_MESSAGES"] });
+const { MessageEmbed } = require("discord.js");
 
 module.exports = {
     name: 'cm',
@@ -67,7 +66,7 @@ module.exports = {
         
     const embed = new MessageEmbed()
     .setTitle(`❤‍🩹 ${msg.author.username}님의 크툴루의 부름7th 광기의 발작(실시간)`) 
-    .setColor('0f4c81') 
+    .setColor('#FF4500') 
     .setDescription(`${conc}`);       
     msg.reply({ embeds: [embed] });
 

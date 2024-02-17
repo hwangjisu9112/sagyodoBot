@@ -9,7 +9,7 @@
  */
 
 // discord.js 라이브러리 호출
-const { Client, Intents, Discord, Collection } = require("discord.js");
+const { Client, Intents, Collection } = require("discord.js");
 const client = new Client({ intents: ["GUILDS", "GUILD_MESSAGES"] });
 const { TOKEN, PREFIX } = require("./config.json");
 const fs = require("fs");
@@ -36,10 +36,11 @@ client.once('ready', () => {
  
 /**
  * messageCreate
- * 유저가 !로 시작하는 채팅을 치면 command폴더의 js파일을 읽고 반응한다
+ * 유저가 접두사로 시작하는 채팅을 치면 command폴더의 .js파일을 읽고 반응한다
  */  
-
 client.on('messageCreate', msg => {
+
+    //명령어가 접두사로 시작하지 않거나, 혹은 봇 자신이 내놓은 답변에 다시 반복해서 답변하지 않도록 하는 코드
     if (!msg.content.startsWith(PREFIX) || msg.author.bot) return;
   
     const args = msg.content.slice(PREFIX.length).trim().split(/ +/);
@@ -53,7 +54,7 @@ client.on('messageCreate', msg => {
      msg.reply("🍦 명령어가 존재하지 않습니다 \n !도움 으로 명령어 목록을 볼 수 있습니다");
      return;
    }
-      // 유저가 올바른 명령어를 입력하더라도, 그 기능이 오류가 있다면 출력
+      // 유저가 올바른 명령어를 입력하더라도, 그 기능에 오류가 있다면 출력
    try {
        client.commands.get(command).execute(msg, args);
      } catch (e) {

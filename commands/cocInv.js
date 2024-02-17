@@ -1,8 +1,7 @@
 // !cc를 입력하면 <크툴루의 부름>의 탐사자용 능력치가 출력된다
 
-const { Client, MessageEmbed } = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 const C = require("./coc.json");
-const client = new Client({ intents: ["GUILDS", "GUILD_MESSAGES"] });
 
 
 //무작위 능력치 제공을 위한 가상 주사위
@@ -95,7 +94,7 @@ module.exports = {
 
         const embed = new MessageEmbed()
         .setTitle(`${msg.author.username}님의 크툴루의 부름7th 탐사자`) 
-        .setColor('0f4c81') 
+        .setColor('#84A7D3') 
         .setDescription(`${C.str}${str}\n${C.dex}${dex}\n${C.pow}${pow}\n${C.hth}${hth}\n${C.app}${app}\n${C.edu}${edu}\n${C.siz}${siz}\n${C.int}${int}\n${C.luk}${luk}\n${C.san}${san}\n${C.hp}${hp}${C.mp}${mp}\n${C.skill}${skill}\n${C.db}${db}(${dmg})`);       
         msg.reply({ embeds: [embed] });
     },

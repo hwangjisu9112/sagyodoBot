@@ -21,8 +21,7 @@ const emojiScroll= '📜';
 
 
 module.exports = {
-    name: "감정표현",
-    aliases: ["교도야"],
+    name: "교도야",
     description: "이모지반응",
     execute: (msg) => {
         const args = msg.content.split(' ');
@@ -34,7 +33,7 @@ module.exports = {
 
             case '목록':
                 const embed = new MessageEmbed()
-                    .setTitle("이하의 명령어를 추가로 입력하면 사교도가 답변합니다")
+                    .setTitle("이하의 명령어를 추가로 입력하면 사교도가 반응합니다")
                     .setColor('0f4c81')
                     .setDescription(getReactionsDescriptions());
                 msg.reply({ embeds: [embed] });

@@ -9,8 +9,8 @@ module.exports = {
     execute: function (msg, args) {
         // 유저의 명령어를 분석하여 주사위를 던질 횟수를 결정합니다.
         let times = 1;
-        const match = args.join('').toLowerCase().match(/(\d+)/);
-        if (match) {
+        const match4 = args.join('').toLowerCase().match(/(\d+)/);
+        if (match4) {
             times = parseInt(match[0], 10);
         }
 
