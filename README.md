@@ -38,6 +38,10 @@ sagyodoBot은 디스코드 그룹 <<TRPG집회소>>에서 비영리적 목적으
 ![image](https://github.com/hwangjisu9112/sagyodoBot/assets/101966205/5dc6afe3-dcbf-49d7-aec4-62efb5481f96)
 
 
-![image](https://github.com/hwangjisu9112/sagyodoBot/assets/101966205/13adb572-2b1d-4ff4-8379-b7b543445571)
+# How to Install
 
+
+npm install discord.js@13.17.1
+
+node index.js
 
