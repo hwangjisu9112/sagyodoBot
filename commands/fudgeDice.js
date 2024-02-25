@@ -11,21 +11,21 @@ module.exports = {
         let times = 1;
         const match4 = args.join('').toLowerCase().match(/(\d+)/);
         if (match4) {
-            times = parseInt(match[0], 10);
+            times = parseInt(match4[0], 10);
         }
-
-        // 유효한 숫자가 아니거나 0보다 작은 경우 에러 메시지를 출력하고 함수를 종료합니다.
+다
+        // 유효한 숫자가 아니거나 0보다 작은 경우 에러 메시지를 출력하고 함수를 종료
         if (isNaN(times) || times <= 0 || times > 10) {
             msg.channel.send('🤔 유효한 숫자를 입력해주세요. <<예: !fd 2>>\n최대 10까지 입력할 수 있습니다');
             return;
         }
 
-        // 여러 개의 퍼지 주사위를 던져서 결과를 계산합니다.
+        // 여러 개의 퍼지 주사위를 던져서 결과를 계산
         let totalValue = 0;
         let resultValue = '';
         let resultMark = '';
 
-        // 퍼지 주사위를 던집니다.
+        // 퍼지 주사위.
         for (let i = 0; i < times; i++) {
             const fudgeDie = rollDice();
             let fudgeValue = '';
@@ -42,7 +42,7 @@ module.exports = {
                 fudgeValue = '0';
                 fudgeMark = '[ ]';
             }
-            // 결과를 문자열로 추가합니다.
+            // 결과를 문자열로 추가.
             resultValue += fudgeValue;
             resultMark += fudgeMark;
 
@@ -51,7 +51,7 @@ module.exports = {
             }
         }
 
-        // 결과를 메시지로 출력합니다.
+        // 결과를 메시지로 출력
         msg.channel.send(`>>> 🍫 : ${resultMark}\n ${resultValue}\n 결과 :  ${totalValue} `);
     }
 };

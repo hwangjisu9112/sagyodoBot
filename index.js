@@ -47,10 +47,17 @@ client.on('messageCreate', msg => {
     const command = args.shift().toLowerCase();
 
       // 사용자가 접두사만 입력했을 때 반응하지 않도록 하는 코드
-   if (command === '' || command === '!'|| command.length >= 10) return;
-    
+   if (command === '' || command === '!'|| command.length >= 50) {
+    console.log('RETURNED')
+    return;
+
+    // 사용자가 !!뒤에 추가로 명령어를 입력하는 경우에도 무시하고 리턴, 노래하는 하리보봇과 같이 작동 방지
+   } else if (command.startsWith( '!')) {
+    console.log('RETURNED')
+    return;
+   } 
       // 명령어가 존재하지 않은 경우, 리턴
-   if (!client.commands.has(command)) {
+    else if (!client.commands.has(command)) {
      msg.reply("🍦 명령어가 존재하지 않습니다 \n !도움 으로 명령어 목록을 볼 수 있습니다");
      return;
    }
