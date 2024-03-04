@@ -3,7 +3,7 @@
 module.exports = {
     name: 'hr',
     description: '비밀 주사위',
-    execute: function (msg, args) {
+    async execute(interaction,args) {
         // 유저가 입력한 명령어를 분석 (!1d5+1 => [1, 5, 1])
         const match2 = args.join('').toLowerCase().match(/(\d+d\d+|\d+)/g);
 
@@ -41,6 +41,6 @@ module.exports = {
         const rollArray = rolls.join(' + ');
         const numberArray = numbers.join(' + ');
 
-        msg.channel.send(`>>> ㊙️ : ||[ ${rollArray} ${numbers.length > 0 ? '+ ' + numberArray : ''} ]\n${total}||`);
+        await interaction.reply(`>>> ㊙️ : ||[ ${rollArray} ${numbers.length > 0 ? '+ ' + numberArray : ''} ]\n${total}||`);
     }
 };

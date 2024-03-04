@@ -6,14 +6,14 @@
 module.exports = {
     name: 'fd',
     description: '퍼지 주사위',
-    execute: function (msg, args) {
-        // 유저의 명령어를 분석하여 주사위를 던질 횟수를 결정합니다.
+    async execute(interaction, args) {
+        // 유저의 명령어를 분석하여 주사위를 던질 횟수를 결정.
         let times = 1;
         const match4 = args.join('').toLowerCase().match(/(\d+)/);
         if (match4) {
             times = parseInt(match4[0], 10);
         }
-다
+
         // 유효한 숫자가 아니거나 0보다 작은 경우 에러 메시지를 출력하고 함수를 종료
         if (isNaN(times) || times <= 0 || times > 10) {
             msg.channel.send('🤔 유효한 숫자를 입력해주세요. <<예: !fd 2>>\n최대 10까지 입력할 수 있습니다');
@@ -52,7 +52,7 @@ module.exports = {
         }
 
         // 결과를 메시지로 출력
-        msg.channel.send(`>>> 🍫 : ${resultMark}\n ${resultValue}\n 결과 :  ${totalValue} `);
+        await interaction.reply(`>>> 🍫 : ${resultMark}\n ${resultValue}\n 결과 :  ${totalValue} `);
     }
 };
 
