@@ -13,7 +13,7 @@ module.exports = {
     async execute(msg) {
         const args = msg.content.split(' ');
         const endpoint = args[1];  
-        const jsonName = args[2] ? args[2].toLowerCase() : null; 
+        const jsonName = args.slice(2).join('-').toLowerCase(); // 공백을 "-"로 대체하여 문자열 조합
 
         console.log('Endpoint:', endpoint);
         console.log('JSON Name:', jsonName);
@@ -54,7 +54,7 @@ module.exports = {
                 
                     const chunks = jsonString.match(/[\s\S]{1,2000}/g) || [];
                     chunks.forEach(chunk => {
-                        channel.send(chunk);
+                        channel.send('```\n' + chunk + '\n```');
                     });
                 }
                 

@@ -2,10 +2,12 @@
 // 주사위의 결과값을 전체 채널 대신 유저의 개인 메시지로 전달합니다.
 // ?d? + ?d? + ?
 
+const emojiReaction = '🫢';
+
 module.exports = {
-    name: 'r',
+    name: 'wr',
     description: '주사위',
-    async execute(interaction,args) {
+    async execute(msg, args) {
         // 유저가 입력한 명령어를 분석 (!1d5+1 => [1, 5, 1])
         const match1 = args.join('').toLowerCase().match(/(\d+d\d+|\d+)/g);
 
@@ -46,6 +48,7 @@ module.exports = {
         const rollArray = rolls.join(' + ');
         const numberArray = numbers.join(' + ');
 
-        msg.author.send(`>>> 📨 : [ ${rollArray} ${numbers.length > 0 ? '+ ' + numberArray : ''} ]\n${total}`);
+        msg.react(emojiReaction);      
+        msg.author.send(`>>> 🤫 : [ ${rollArray} ${numbers.length > 0 ? '+ ' + numberArray : ''} ]\n${total}`);
     }
 };
