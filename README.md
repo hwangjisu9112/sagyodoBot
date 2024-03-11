@@ -31,16 +31,15 @@ sagyodoBot은 디스코드 그룹 <<TRPG집회소>>에서 비영리적 목적으
         "dd": "!dd = D&D5e API에 수록된 던전 앤 드래곤 정보를 검색합니다",
         "fd": "!fd ? = '퍼지다이스'를 던집니다. 최대 10개까지 굴릴 수 있습니다"
 ```
-![image](https://github.com/hwangjisu9112/sagyodoBot/assets/101966205/97bdfe5d-c0b6-4d18-a447-30de899bc711)
 
 
-![image](https://github.com/hwangjisu9112/sagyodoBot/assets/101966205/5dc6afe3-dcbf-49d7-aec4-62efb5481f96)
+
 
 
 # How to Install
 
 
 npm install discord.js@13.17.1
-
+create congif.json
 node index.js
 
