@@ -10,6 +10,15 @@ sagyodoBot은 디스코드 그룹 <<TRPG집회소>>에서 비영리적 목적으
 자바스크립트, discord.js()
 상시 호스팅을 위한 서비스 물색중... 
 ```
+├── @discordjs/rest@2.2.0
+├── discord-api-types@0.37.70
+├── discord-modals@1.3.9
+├── discord.js@13.17.1
+├── eslint@8.57.0
+├── googleapis@133.0.0
+└── nodemon@3.0.2
+
+
 
 
 ◇ 명령어는 느낌표(!)로 시작합니다. 
