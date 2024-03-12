@@ -48,7 +48,7 @@ module.exports = {
         const rollArray = rolls.join(' + ');
         const numberArray = numbers.join(' + ');
 
-        msg.react(emojiReaction);      
+        msg.react(emojiReaction);       
         msg.author.send(`>>> 🤫 : [ ${rollArray} ${numbers.length > 0 ? '+ ' + numberArray : ''} ]\n${total}`);
     }
 };
