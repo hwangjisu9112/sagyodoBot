@@ -12,7 +12,7 @@ sagyodoBot은 디스코드 그룹 <<TRPG집회소>>에서 비영리적 목적으
 ```
 
 
-◇ 모든 명령어는 느낌표(!)로 시작합니다. 
+◇ 명령어는 느낌표(!)로 시작합니다. 
 
 <img width="441" alt="image" src="https://github.com/hwangjisu9112/sagyodoBot/assets/101966205/b57f86be-b4e1-47c8-bc3b-7168b469ebd9">
 
@@ -41,6 +41,10 @@ sagyodoBot은 디스코드 그룹 <<TRPG집회소>>에서 비영리적 목적으
 
 
 npm install discord.js@13.17.1
+
+
 create congif.json
+
+
 node index.js
 
