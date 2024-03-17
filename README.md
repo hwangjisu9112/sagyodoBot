@@ -8,24 +8,11 @@ sagyodoBot은 디스코드 그룹 <<TRPG집회소>>에서 비영리적 목적으
 
 ```
 자바스크립트, discord.js()
-상시 호스팅을 위한 서비스 물색중...
-
-
-├── @discordjs/rest@2.2.0
-├── discord-api-types@0.37.70
-├── discord-modals@1.3.9
-├── discord.js@13.17.1
-├── eslint@8.57.0
-├── googleapis@133.0.0
-└── nodemon@3.0.2
-
-
+상시 호스팅을 위한 서비스 물색중... 
 ```
 
 
-
-
-◇ 명령어는 느낌표(!)로 시작합니다. 
+◇ 모든 명령어는 느낌표(!)로 시작합니다. 
 
 <img width="441" alt="image" src="https://github.com/hwangjisu9112/sagyodoBot/assets/101966205/b57f86be-b4e1-47c8-bc3b-7168b469ebd9">
 
@@ -39,15 +26,15 @@ sagyodoBot은 디스코드 그룹 <<TRPG집회소>>에서 비영리적 목적으
         "코코": "!코코 = 플레이어용 코코포리아 사용법 링크를 출력합니다",
         "r": "!r + ?d? = ?면체 주사위를 ?번만큼 던집니다. ?는 자연수입니다",
         "hr": "!hr + ?d? = !r와 같은 기능, 클릭하기 전까지 보이지 않습니다",
-        "wr": "!wr + ?d? = !r와 같은 기능, 결과를 개인 메시지로 보냅니다",
         "cc": "!cc = 크툴루의 부름의 탐사자 캐릭터를 위한 특성치 등을 출력합니다",
         "cm": "!cm = 크툴루의 부름의 탐사자 캐릭터를 위한 표준 광기표를 출력합니다",
         "dd": "!dd = D&D5e API에 수록된 던전 앤 드래곤 정보를 검색합니다",
         "fd": "!fd ? = '퍼지다이스'를 던집니다. 최대 10개까지 굴릴 수 있습니다"
 ```
+![image](https://github.com/hwangjisu9112/sagyodoBot/assets/101966205/97bdfe5d-c0b6-4d18-a447-30de899bc711)
 
 
-
+![image](https://github.com/hwangjisu9112/sagyodoBot/assets/101966205/5dc6afe3-dcbf-49d7-aec4-62efb5481f96)
 
 
 # How to Install
@@ -55,28 +42,5 @@ sagyodoBot은 디스코드 그룹 <<TRPG집회소>>에서 비영리적 목적으
 
 npm install discord.js@13.17.1
 
-
-create congif.json
-
-
 node index.js
 
-
-
-
-# plan
-
-
-2024.03.10 잠정적인 개발 휴식
-
-목표와 개선점
-
-discord.js v14로 리팩토링
-
-사다리 게임 기능 구현해보기
-모달 기능 구현해보기
-슬러쉬 명령어 도입 고려
-타입스크립트 활용해보기
-openAi api를 이용한 챗봇 기능 구현해보기
-
-1개월만이라도 상시 호스팅 해보기
