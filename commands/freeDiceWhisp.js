@@ -6,7 +6,7 @@ const emojiReaction = '🫢';
 
 module.exports = {
     name: 'wr',
-    description: '주사위',
+    description: '귓속말 주사위',
     async execute(msg, args) {
         // 유저가 입력한 명령어를 분석 (!1d5+1 => [1, 5, 1])
         const match1 = args.join('').toLowerCase().match(/(\d+d\d+|\d+)/g);
@@ -21,6 +21,8 @@ module.exports = {
         let numbers = [];
 
         let total = 0;
+
+        console.log("귓속말 주사위 실시");
 
         //
         match1.forEach((diceString) => {
@@ -47,6 +49,9 @@ module.exports = {
 
         const rollArray = rolls.join(' + ');
         const numberArray = numbers.join(' + ');
+
+        console.log("주사위를 던진 랜덤한 값 rollArray : " + rollArray);
+        console.log("더하거나 빼는 상수 numberArray : " + numberArray);
 
         msg.react(emojiReaction);       
         msg.author.send(`>>> 🤫 : [ ${rollArray} ${numbers.length > 0 ? '+ ' + numberArray : ''} ]\n${total}`);

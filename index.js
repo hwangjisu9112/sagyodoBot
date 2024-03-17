@@ -17,6 +17,7 @@ const fs = require("fs");
 client.commands = new Collection(); 
 
 
+
 // commands디렉토리에 있는 자바스크립트 파일들로부터 명령어들의 모음인 name들을 전부 찾아온다
 const commandFiles = fs
   .readdirSync("./commands")
@@ -27,6 +28,7 @@ for (const file of commandFiles) {
 
   client.commands.set(command.name, command);
 }
+
 
 
 // discord 봇이 실행될 때 터미널에 실행할 코드
@@ -48,13 +50,13 @@ client.on('messageCreate', msg => {
     const command = args.shift().toLowerCase();
 
       // 사용자가 접두사만 입력했을 때 반응하지 않도록 하는 코드
-   if (command === '' || command === '!'|| command.length >= 50) {
-    console.log('RETURNED')
+   if (command === '' || command === '!'|| command.length >= 200) {
+    console.log('ignore command')
     return;
 
     // 사용자가 !!뒤에 추가로 명령어를 입력하는 경우에도 무시하고 리턴, 노래하는 하리보봇과 같이 작동 방지
-   } else if (command.startsWith( '!')) {
-    console.log('RETURNED')
+   } else if (command.startsWith('!')) {
+    console.log('!! return')
     return;
    } 
       // 명령어가 존재하지 않은 경우, 리턴
