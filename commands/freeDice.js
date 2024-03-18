@@ -6,7 +6,8 @@ module.exports = {
     description: '주사위',
     async execute(interaction,args) {
         // 유저가 입력한 명령어를 분석 (!1d5+1 => [1, 5, 1])
-        const match1 = args.join('').toLowerCase().match(/(\d+d\d+|\d+)/g);
+        const match1 = args.join('').toLowerCase().match(/(\d+d\d+|\d+|\-\d+)/g);
+
         
 
         if (!match1) {
@@ -20,7 +21,7 @@ module.exports = {
 
         let total = 0;
 
-        console.log("일반 주사위 실시");
+        console.log("일반 주사위 실시" + match1);
 
         //
         match1.forEach((diceString) => {
@@ -46,7 +47,7 @@ module.exports = {
                     console.log("number >= 0 " + number);
                 } else {
                     numbers.push(number);
-                    total -= number; 
+                    total += number; 
                     console.log("number < 0 " + number);
                 }
             }

@@ -25,6 +25,8 @@ module.exports = {
             return;
         }
 
+        console.log("퍼지 주사위 실시 " + match4); 
+ 
 
         // 여러 개의 퍼지 주사위를 던져서 결과를 계산
         let totalValue = 0;
