@@ -44,3 +44,12 @@ npm install discord.js@13.17.1
 
 node index.js
 
+
+
+# Start Over
+
+타입 스크립트
+데이터베이스 적용
+discord.js 14 적용(버튼, 모달, 투표 기능 구현)
+/ 기반 커맨드 
+Open AI API로 챗봇 기능 구현하기
